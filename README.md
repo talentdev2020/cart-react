@@ -10,7 +10,7 @@ You can check the live site at https://fulhaus-cart.netlify.app
 
 ## Functionality
 
-- Shows product
+- Shows products
 - Shows Cart Drawer and add/remove carts
 
 ## How to run this project
@@ -20,9 +20,9 @@ You can check the live site at https://fulhaus-cart.netlify.app
 
 ## Used Libraries
 
-react.js
-react-redux
-redux-saga
-axios
-antdesign
-typescript
+react.js,
+react-redux,
+redux-saga,
+axios,
+antdesign,
+typescript,
