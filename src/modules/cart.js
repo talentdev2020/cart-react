@@ -14,7 +14,7 @@ const actions = handleActions(
     [ADDCART]: (state, action) => {
       state.carts.push({
         ...action.payload,
-        id: Date.now()
+        id: Date.now() + state.carts.length
       });
       localStorage.setItem("carts", JSON.stringify(state.carts))
       return {

@@ -26,7 +26,6 @@ const actions = handleActions(
     [SETDATA]: (state, action) => ({
       ...state,
       products: action.payload,
-      isError: false,
     })
   },
   initialState,
