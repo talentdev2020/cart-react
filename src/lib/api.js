@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const getData = () => {
-  return axios.get('https://main-api.fulhaus.com/fulhaus-tech-test/get-products');
+  return axios.get(process.env.REACT_APP_API_URL + '/get-products');
 };
