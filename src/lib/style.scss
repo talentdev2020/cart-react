@@ -1,3 +1,5 @@
+$spaceSmall: 10px;
+$spaceMedium: 20px;
 .float-right {
     float: right;
 }
@@ -7,7 +9,7 @@
     justify-content: space-between;
 }
 .mt-20 {
-    margin-bottom: 20px;
+    margin-bottom: $spaceMedium;
 }
 /*--------Product--------*/
 .home {
@@ -17,16 +19,37 @@
     .banner {
         max-width: 900px;
         max-height: calc(100vh - 65px);
+        position: relative;
+        
         .ant-image-img, .ant-image {
             height: 100%;
         }
     }
 }
 
+.furniture-text {
+    position: absolute;
+    top: 0;
+    color: black;
+    text-align: center;
+    left: 50px;
+    font-weight: 500;
+}
+
+.furniture-cart {
+    position: absolute;
+    bottom: 30px;
+    background-color: black;
+    color: grey;
+    padding: 5px $spaceMedium;
+    left: 50px;
+    font-size: 10px;
+}
+
 .products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 10px;
+    margin-left: $spaceSmall;
     height: 100%;
     max-height: calc(100vh - 65px);
     overflow: auto;
@@ -80,16 +103,16 @@
     }
 
     .product-body {
-        margin-left: 10px;
+        margin-left: $spaceSmall;
         width: 100%;
     }
 }
 
 .item-cart {
-    margin-right: 20px;
+    margin-right: $spaceMedium;
     color: rgb(190, 11, 11);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 10px;
 }
 
 .btn-checkout {
