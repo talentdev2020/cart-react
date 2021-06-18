@@ -7,8 +7,8 @@ export interface ProductInterface {
     id?: string;
   }
 export interface RootState {
-    collection: {
-      collection: Array<ProductInterface>
+  product: {
+    products: Array<ProductInterface>
     }
     cart: {
       carts: Array<ProductInterface>

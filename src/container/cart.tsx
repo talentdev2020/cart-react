@@ -9,17 +9,17 @@ const CartContainer = () => {
     );
     const dispatch = useDispatch();
     const onDeleteCart = (id: string) => {
-        console.log({id})
         dispatch(deleteCart(id));
     }
+
     return (
         <div className=''>
-            <h2>My Order</h2>
+            <h2 className="mt-20">My Order</h2>
 
            {
                carts.map(item => {
                    return (
-                       <Cart key={item._id} item ={item} deleteCart={onDeleteCart}/>
+                       <Cart key={item.id} item ={item} deleteCart={onDeleteCart}/>
                    )
                })
            }             

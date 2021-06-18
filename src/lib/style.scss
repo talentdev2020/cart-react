@@ -6,6 +6,9 @@
     display: flex;
     justify-content: space-between;
 }
+.mt-20 {
+    margin-bottom: 20px;
+}
 /*--------Product--------*/
 .home {
     display: flex;
@@ -13,7 +16,7 @@
 
     .banner {
         max-width: 900px;
-        height: 100vh;
+        max-height: calc(100vh - 65px);
         .ant-image-img, .ant-image {
             height: 100%;
         }
@@ -25,6 +28,8 @@
     grid-template-columns: repeat(3, 1fr);
     margin-left: 10px;
     height: 100%;
+    max-height: calc(100vh - 65px);
+    overflow: auto;
 }
 
 .product-body {

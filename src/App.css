@@ -5,8 +5,7 @@
   color: white;
   max-width: 1200px;
   margin: auto;
-  margin-top: 50px;
-  max-height: 800px;
+  max-height: 100%;
 }
 
 .App-logo {
@@ -19,7 +18,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 .App-link {
   color: #61dafb;

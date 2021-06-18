@@ -8,6 +8,7 @@ const initialState = {
 
 export const addCart = createAction(ADDCART);
 export const deleteCart = createAction(DELETECART);
+
 const actions = handleActions(
   {
     [ADDCART]: (state, action) => {
@@ -33,4 +34,5 @@ const actions = handleActions(
   },
   initialState,
 );
+
 export default actions;

@@ -4,18 +4,19 @@ import {RootState, ProductInterface} from "../interfaces";
 import { addCart } from '../modules/cart';
 
 const ProductsContainer = () => {
-    const collection = useSelector(
-        (state: RootState) => state.collection.collection,
+    const products = useSelector(
+        (state: RootState) => state.product.products,
       );
     const dispatch = useDispatch();
 
     const onAddCart = (item: ProductInterface) => {
       dispatch(addCart(item));
     }
+    
     return (
         <div className='products'>
           {
-            collection && collection.map(item => {
+            products && products.map(item => {
               return (
                 <Product item={item} key={item._id} addCart= {onAddCart}/>
               )

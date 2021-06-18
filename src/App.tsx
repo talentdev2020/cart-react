@@ -1,8 +1,8 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Product from "./pages/product"
 import { useDispatch } from 'react-redux';
-import { getProducts } from './modules/collection';
+import { getProducts } from './modules/product';
 import { Layout, Drawer } from 'antd';
 import HeaderContainer from "./container/header";
 import CartContainer from "./container/cart";
@@ -17,6 +17,7 @@ const { Header, Content } = Layout;
 function App() {
   const [visible, setVisible] = useState(false);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch])
@@ -33,6 +34,7 @@ function App() {
         </Header>
 
         <Content>  <Product /></Content>
+        
         <Drawer
             width={640}
             placement="right"

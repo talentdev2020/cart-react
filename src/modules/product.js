@@ -5,26 +5,27 @@ import { getData } from '../lib/api';
 const GETDATA = 'GETDATA';
 const SETDATA = 'SETDATA';
 const initialState = {
-  collection: [],
+  products: [],
 };
 
 export const getProducts = createAction(GETDATA);
+
 function* getDataSaga() {
   try {
-    const collection = yield call(getData);
-    yield put({ type: SETDATA, payload: collection.data });
+    const products = yield call(getData);
+    yield put({ type: SETDATA, payload: products.data });
   } catch (e) {
   }
 }
 
-export function* collectionSaga() {
+export function* productSaga() {
   yield takeLatest(GETDATA, getDataSaga);
 }
 const actions = handleActions(
   {
     [SETDATA]: (state, action) => ({
       ...state,
-      collection: action.payload,
+      products: action.payload,
       isError: false,
     })
   },
