@@ -17,12 +17,16 @@ $spaceMedium: 20px;
     background-color: white;
 
     .banner {
-        max-width: 900px;
-        max-height: calc(100vh - 65px);
         position: relative;
-        
-        .ant-image-img, .ant-image {
+
+        .ant-image {
             height: 100%;
+        }
+
+        .ant-image-img {
+            height: 100%;
+            object-fit: cover;
+            object-position: right;
         }
     }
 }
@@ -34,6 +38,7 @@ $spaceMedium: 20px;
     text-align: center;
     left: 50px;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .furniture-cart {
@@ -44,6 +49,7 @@ $spaceMedium: 20px;
     padding: 5px $spaceMedium;
     left: 50px;
     font-size: 10px;
+    text-transform: uppercase;
 }
 
 .products {
