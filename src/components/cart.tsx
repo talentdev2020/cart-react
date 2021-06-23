@@ -20,7 +20,7 @@ const Cart: FunctionComponent<CartProps> = ({ item, deleteCart }) => {
                     </div>
 
        
-                        <a href='#' onClick={()=>deleteCart(item.id)} > Delete </a>
+                        <a href='/' onClick={(e) => {e.preventDefault(); deleteCart(item.id) }} > Delete </a>
                  </div>
             </div>
         </div>
