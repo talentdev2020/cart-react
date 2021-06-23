@@ -28,7 +28,7 @@ img {
 .home {
     display: flex;
     background-color: white;
-    width: 100%;
+    margin: $spaceSmall;
 
     .banner {
         position: relative;
@@ -240,7 +240,8 @@ img {
        display: block;
    }
    .product {
-       margin-right: 5px;
+       margin-left: 0px;
+       margin-right: 0px;
    }
    .products {
        margin-left: 0;
