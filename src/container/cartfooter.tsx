@@ -17,10 +17,10 @@ const CartContainer = () => {
     }, [carts]) 
 
     return (
-        <div className=''>
+        <div>
             <div className='flex-between'>
-                <div><h3>Total</h3></div>
-                <div><h3>${total}</h3></div>
+                <div className='checkout-label'>Total</div>
+                <div className='checkout-label'>${total}</div>
             </div>
            
            <div className='btn-checkout'>Checkout</div>
