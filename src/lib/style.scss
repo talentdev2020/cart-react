@@ -43,7 +43,7 @@ img {
 
 .furniture-text {
     position: absolute;
-    top: 0;
+    top: 20px;
     color: black;
     text-align: center;
     left: 50px;
@@ -53,13 +53,14 @@ img {
 
 .furniture-cart {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     background-color: black;
     color: grey;
     padding: 5px $spaceMedium;
     left: 50px;
     font-size: 10px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .products {
@@ -237,6 +238,12 @@ img {
 @media screen and (max-width: 500px) {
    .home {
        display: block;
+   }
+   .product {
+       margin-right: 5px;
+   }
+   .products {
+       margin-left: 0;
    }
 }
  
