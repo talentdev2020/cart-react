@@ -1,29 +1,39 @@
 $spaceSmall: 10px;
 $spaceMedium: 20px;
-.float-right {
-    float: right;
+
+.header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #001529;
+    padding: 0 40px;
+    justify-content: flex-end;
 }
 
 .flex-between {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
 .mt-20 {
     margin-bottom: $spaceMedium;
 }
+
+img {
+    width: 100%;
+}
+
 /*--------Product--------*/
 .home {
     display: flex;
     background-color: white;
+    width: 100%;
 
     .banner {
         position: relative;
 
-        .ant-image {
-            height: 100%;
-        }
-
-        .ant-image-img {
+        img {
             height: 100%;
             object-fit: cover;
             object-position: right;
@@ -63,13 +73,14 @@ $spaceMedium: 20px;
 
 .product-body {
     align-items: flex-end;
+    padding: $spaceSmall;
 }
 
 .product {
     color: black;
     font-size: 14px;
     font-weight: 500;
-    margin: 5px 3px;
+    margin: 5px 0px 5px 5px;
     padding: 2px;
     background-color: #f5f5f5;
 }
@@ -79,22 +90,33 @@ $spaceMedium: 20px;
 }
 
 /*-------Cart---------*/
-.cart {
-    .anticon-shopping-cart {
-        font-size: 38px;
-        color: white;
-        cursor: pointer;
-    }
+.carts-container {
+    float: right;
+    position: relative;
 }
 
-.cart-drawer {
-    .ant-drawer-content-wrapper {
-        max-width: 350px;
-    }
+.carts {
+    cursor: pointer;
+    background-image: url("./images/carts.png");
+    background-repeat: none;
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+}
 
-    .ant-drawer-content {
-        background: #f5f5f5;
-    }
+.badge {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    font-size: 13px;
+    background: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
 }
 
 .cart-price {
@@ -103,22 +125,23 @@ $spaceMedium: 20px;
 
 .cart-body {
     display: flex;
-    
-    .ant-image-img {
+
+    img {
         width: 100px;
     }
 
     .product-body {
         margin-left: $spaceSmall;
-        width: 100%;
     }
 }
 
 .item-cart {
-    margin-right: $spaceMedium;
-    color: rgb(190, 11, 11);
     cursor: pointer;
-    font-size: 14px;
+    background-image: url("./images/cart.png");
+    background-repeat: none;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
 }
 
 .btn-checkout {
@@ -129,6 +152,70 @@ $spaceMedium: 20px;
     padding: 15px 0;
     cursor: pointer;
 }
+/*-----------drawer--------------------*/
+@keyframes drawer-animation {
+    0%   {right: -350px;} 
+    100% {right: 0px;}
+  }
+.drawer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 10px 10px;
+    flex-direction: column;
+    max-width: 350px;
+    background: #f5f5f5;
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    animation-name: drawer-animation;
+    animation-duration: 0.5s;
+    color: black;
+}
+
+.cart-products {
+    max-height: calc(100vh - 230px);
+    overflow: auto;
+}
+
+.drawer-header {
+    font-size: 24px;
+}
+
+.drawer-footer {
+    position: absolute;
+    bottom: 30px;
+    padding-bottom: 20px;
+    left: 10px;
+    right: 10px;
+  }
+
+.invisible {
+    display: none;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    right: 10px;
+    position: absolute;
+    color: black;
+    cursor: pointer;
+
+    &::before { 
+        content: "\2715";
+    }
+}
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 900px) {
     .products {

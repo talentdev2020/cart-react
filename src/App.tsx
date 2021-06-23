@@ -3,16 +3,12 @@ import { useEffect, useState } from 'react';
 import Product from "./pages/product"
 import { useDispatch } from 'react-redux';
 import { getProducts } from './modules/product';
-import { Layout, Drawer } from 'antd';
 import HeaderContainer from "./container/header";
 import CartContainer from "./container/cart";
 import CartFooterContainer from "./container/cartfooter";
-
+import Drawer from "./components/drawer";
 import './App.css';
 import "./lib/style.scss";
-import 'antd/dist/antd.css';
-
-const { Header, Content } = Layout;
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -28,28 +24,23 @@ function App() {
 
   return (
     <div className="App">
-      <Layout>
-        <Header>
+         <div className='header'>
           <HeaderContainer setVisible = {setVisible}/>
-        </Header>
+        </div>
 
-        <Content>  <Product /></Content>
+        <Product />
         
         <Drawer
-            width={640}
-            placement="right"
-            closable={true}
-            onClose={onClose}
-            visible={visible}
-            className="cart-drawer"
             footer={
               <CartFooterContainer />
             }
+            body={<CartContainer/>}
+            header='My Order'
+            onClose={onClose}
+            visible={visible}
         >          
-         <CartContainer />
         </Drawer>
-      </Layout>
-    
+     
     </div>
   );
 }

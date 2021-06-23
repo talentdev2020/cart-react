@@ -19,8 +19,8 @@ const CartContainer = () => {
     return (
         <div className=''>
             <div className='flex-between'>
-                <div><h2>Total</h2></div>
-                <div><h2>${total}</h2></div>
+                <div><h3>Total</h3></div>
+                <div><h3>${total}</h3></div>
             </div>
            
            <div className='btn-checkout'>Checkout</div>

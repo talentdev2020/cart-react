@@ -1,6 +1,4 @@
 .App {
-  display: flex;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   max-width: 1200px;

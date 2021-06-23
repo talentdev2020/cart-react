@@ -13,9 +13,7 @@ const CartContainer = () => {
     }
 
     return (
-        <div className=''>
-            <h2 className="mt-20">My Order</h2>
-
+        <div className='cart-products'>
            {
                carts.map(item => {
                    return (

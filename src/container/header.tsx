@@ -1,8 +1,6 @@
 import { FunctionComponent } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from "../interfaces";
-import { Badge } from 'antd';
-import { ShoppingCartOutlined } from '@ant-design/icons';
 
 type HeaderProps = {
     setVisible: Function
@@ -14,11 +12,9 @@ const HeaderContainer: FunctionComponent<HeaderProps> = ({setVisible}) => {
     );
 
     return (
-        <div className='float-right cart'>
-            <Badge count={carts.length} showZero>
-                <ShoppingCartOutlined  onClick={e => setVisible(true)} />
-            </Badge>
-            
+        <div className='carts-container'>
+            <div className='carts'  onClick={e => setVisible(true)} />
+            <div className='badge'>{carts.length}</div>
         </div>
     )
 }
