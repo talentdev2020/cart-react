@@ -169,7 +169,7 @@ img {
     justify-content: space-between;
     padding: 20px 10px 10px 10px;
     flex-direction: column;
-    max-width: 350px;
+    width: 350px;
     background: #f5f5f5;
     z-index: 9999;
     position: fixed;
@@ -252,6 +252,9 @@ img {
 @media screen and (max-width: 350px) {
    .cart-body {
        display: block;
+   }
+   .drawer {
+       width: 90%;
    }
 }
  
